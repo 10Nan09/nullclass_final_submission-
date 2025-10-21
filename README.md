@@ -1,5 +1,18 @@
 # NullClass Internship Report
 
+## Acknowledgements
+I would like to express my heartfelt gratitude to NullClass for providing me the opportunity to work on the project “Learn To Build A Real Time Job Analytics Portal.”
+This internship has been an enriching experience that allowed me to apply theoretical knowledge to practical, real-world data scenarios.
+
+I extend my sincere thanks to the mentors and coordinators at NullClass for their constant support, timely feedback, and guidance throughout the internship.
+Their valuable insights helped me enhance my understanding of data processing, visualization, and presentation techniques using Python, HTML, and CSS.
+
+I am also grateful to my peers, family, and friends for their continuous encouragement and motivation during the completion of this project.
+
+Finally, I take immense pride in completing this project successfully, which strengthened my skills in data analytics, web technologies, and project documentation.
+
+---
+
 ## Introduction
 This internship with NullClass focused on enhancing data visualization, dashboard development, and time-based interactive features. The main project involved integrating multiple charts into a responsive dashboard while applying complex data filters and conditional displays.  
 
@@ -187,7 +200,7 @@ Time-based conditional chart display ensures that certain data is only visible d
 - Fully functional interactive dashboard with all 5 charts  
 - Charts dynamically display based on IST time conditions  
 - Map feature provides interactive exploration of job locations  
-- Dashboard responsive for all devices  
+- Dashboard is responsive for all devices  
 - Enhanced data visualization and web deployment skills  
 
 ---
@@ -196,4 +209,9 @@ Time-based conditional chart display ensures that certain data is only visible d
 This internship provided practical experience integrating data analysis, visualization, and web deployment. Completing all tasks enhanced my technical and problem-solving skills, and the final dashboard demonstrates my ability to implement complex filters, time-based logic, and interactive features in a professional environment.
 
 ---
+## 🔗 Connect With Me
+- [Gmail](nandhinisambantham24@gmail.com)
+- [LinkedIn](www.linkedin.com/in/nandy15)
+- [GitHub](https://github.com/10Nan09)
+
 
