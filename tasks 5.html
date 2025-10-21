@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internship Dashboard – Data Visualization</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+    color: #333;
+  }
+
+  header {
+    background-color: #1e3a8a; /* Single professional color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  #dashboard-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    min-height: 600px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    color: #888;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+  }
+
+  /* Responsive Tableau iframe */
+  .tableauPlaceholder object {
+    width: 100% !important;
+    border-radius: 10px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 200px;
+  }
+</style>
+</head>
+<body>
+
+<header>Internship Dashboard – Data Visualization</header>
+
+<div id="dashboard-container">
+  <!-- Dashboard or message will appear here -->
+</div>
+
+
+
+<script>
+function loadDashboard() {
+    const now = new Date();
+    const istHour = (now.getUTCHours() + 5 + Math.floor((now.getUTCMinutes()+30)/60)) % 24;
+    const container = document.getElementById('dashboard-container');
+
+    if(istHour >= 15 && istHour < 17) {
+        // Show Tableau dashboard
+        container.innerHTML = `
+          <div class='tableauPlaceholder' id='viz1759333253923' style='position: relative'>
+            <noscript>
+              <a href='#'>
+                <img alt='Internship Dashboard' src='https://public.tableau.com/static/images/TW/TWBK2MRKC/1_rss.png' style='border: none' />
+              </a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' />
+              <param name='path' value='shared/TWBK2MRKC' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image' value='https://public.tableau.com/static/images/TW/TWBK2MRKC/1.png' />
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en-US' />
+              <param name='filter' value='publish=yes' />
+            </object>
+          </div>
+        `;
+
+        var divElement = document.getElementById('viz1759333253923');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+
+        if (divElement.offsetWidth > 800) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        } else if (divElement.offsetWidth > 500) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '777px';
+        }
+
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+
+    } else {
+        // Show time restriction message
+        container.innerHTML = `<p>Dashboard visible only 3–5 PM IST.</p>`;
+    }
+}
+
+// Load dashboard/message on page load
+loadDashboard();
+
+// Refresh every minute
+setInterval(loadDashboard, 60000);
+</script>
+
+</body>
+</html>
